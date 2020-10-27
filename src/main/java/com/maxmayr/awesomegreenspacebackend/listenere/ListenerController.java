@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ListenerController {
 
 	@Autowired
-	ListenerService listenerService;
+	DeviceService deviceService;
 	
 	@PostMapping("")
 	public ResponseEntity<?> createListener(@RequestBody DeviceDto devicePayload) {
-		return new ResponseEntity<DeviceDto>(listenerService.createEntry(devicePayload), HttpStatus.OK);
+		return new ResponseEntity<DeviceDto>(deviceService.createEntry(devicePayload), HttpStatus.OK);
 	}
 }

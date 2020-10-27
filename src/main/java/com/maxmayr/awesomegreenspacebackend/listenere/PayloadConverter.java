@@ -1,5 +1,9 @@
 package com.maxmayr.awesomegreenspacebackend.listenere;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,5 +24,20 @@ public class PayloadConverter {
 		model.setLight(entity.getLight());
 		model.setTemperature(entity.getTemperature());
 		return model;
+	}
+	
+	public List<PayloadDto> toModel(List<PayloadEntity> entities) {
+		List<PayloadDto> models = new ArrayList<>();
+		for (PayloadEntity entity : entities) {
+			models.add(toModel(entity));
+		}
+		return models;
+	}
+
+	public Page<PayloadDto> toModel(Page<PayloadEntity> entities) {
+		if (entities == null) {
+			return null;
+		}
+		return entities.map(this::toModel);
 	}
 }

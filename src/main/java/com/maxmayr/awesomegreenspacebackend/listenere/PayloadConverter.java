@@ -14,6 +14,9 @@ public class PayloadConverter {
 		entity.setEvent(model.getEvent());
 		entity.setLight(model.getLight());
 		entity.setTemperature(model.getTemperature());
+		entity.setHumidity(model.getHumidity());
+		entity.setEco2(model.getEco2());
+		entity.setTvoc(model.getTvoc());
 		return entity;
 	}
 	
@@ -23,6 +26,9 @@ public class PayloadConverter {
 		model.setEvent(entity.getEvent());
 		model.setLight(entity.getLight());
 		model.setTemperature(entity.getTemperature());
+		model.setHumidity(entity.getHumidity());
+		model.setEco2(entity.getEco2());
+		model.setTvoc(entity.getTvoc());
 		return model;
 	}
 	

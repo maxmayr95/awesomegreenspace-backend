@@ -1,5 +1,9 @@
 package com.maxmayr.awesomegreenspacebackend.listenere;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class PayloadDto {
 	private Long battery;
 	private String event;
@@ -8,6 +12,9 @@ public class PayloadDto {
 	private Float humidity;
 	private Float eco2;
 	private Float tvoc;
+	@JsonFormat
+    (shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
+	private Date time;
 	public Long getBattery() {
 		return battery;
 	}
@@ -50,4 +57,11 @@ public class PayloadDto {
 	public void setTvoc(Float tvoc) {
 		this.tvoc = tvoc;
 	}
+	public Date getTime() {
+		return time;
+	}
+	public void setTime(Date time) {
+		this.time = time;
+	}
+	
 }

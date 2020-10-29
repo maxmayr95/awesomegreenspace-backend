@@ -17,6 +17,7 @@ public class PayloadConverter {
 		entity.setHumidity(model.getHumidity());
 		entity.setEco2(model.getEco2());
 		entity.setTvoc(model.getTvoc());
+		entity.setTime(model.getTime());
 		return entity;
 	}
 	
@@ -29,6 +30,7 @@ public class PayloadConverter {
 		model.setHumidity(entity.getHumidity());
 		model.setEco2(entity.getEco2());
 		model.setTvoc(entity.getTvoc());
+		model.setTime(entity.getTime());
 		return model;
 	}
 	

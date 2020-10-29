@@ -1,5 +1,7 @@
 package com.maxmayr.awesomegreenspacebackend.listenere;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,6 +33,8 @@ public class PayloadEntity {
 	private Float eco2;
 	@Column(name = "tvoc")
 	private Float tvoc;
+	@Column(name = "time")
+	private Date time;
 	public Long getId() {
 		return id;
 	}
@@ -84,6 +88,12 @@ public class PayloadEntity {
 	}
 	public void setTvoc(Float tvoc) {
 		this.tvoc = tvoc;
+	}
+	public Date getTime() {
+		return time;
+	}
+	public void setTime(Date time) {
+		this.time = time;
 	}
 	
 	

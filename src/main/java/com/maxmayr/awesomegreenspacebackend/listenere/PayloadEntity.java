@@ -24,13 +24,13 @@ public class PayloadEntity {
 	@Column(name = "light")
 	private Long light;
 	@Column(name = "temperature")
-	private Long temperature;
+	private Float temperature;
 	@Column(name = "humidity")
-	private Long humidity;
+	private Float humidity;
 	@Column(name = "eco2")
-	private Long eco2;
+	private Float eco2;
 	@Column(name = "tvoc")
-	private Long tvoc;
+	private Float tvoc;
 	public Long getId() {
 		return id;
 	}
@@ -61,28 +61,28 @@ public class PayloadEntity {
 	public void setLight(Long light) {
 		this.light = light;
 	}
-	public Long getTemperature() {
+	public Float getTemperature() {
 		return temperature;
 	}
-	public void setTemperature(Long temperature) {
+	public void setTemperature(Float temperature) {
 		this.temperature = temperature;
 	}
-	public Long getHumidity() {
+	public Float getHumidity() {
 		return humidity;
 	}
-	public void setHumidity(Long humidity) {
+	public void setHumidity(Float humidity) {
 		this.humidity = humidity;
 	}
-	public Long getEco2() {
+	public Float getEco2() {
 		return eco2;
 	}
-	public void setEco2(Long eco2) {
+	public void setEco2(Float eco2) {
 		this.eco2 = eco2;
 	}
-	public Long getTvoc() {
+	public Float getTvoc() {
 		return tvoc;
 	}
-	public void setTvoc(Long tvoc) {
+	public void setTvoc(Float tvoc) {
 		this.tvoc = tvoc;
 	}
 	

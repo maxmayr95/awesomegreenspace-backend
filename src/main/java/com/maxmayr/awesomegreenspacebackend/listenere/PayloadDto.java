@@ -4,10 +4,10 @@ public class PayloadDto {
 	private Long battery;
 	private String event;
 	private Long light;
-	private Long temperature;
-	private Long humidity;
-	private Long eco2;
-	private Long tvoc;
+	private Float temperature;
+	private Float humidity;
+	private Float eco2;
+	private Float tvoc;
 	public Long getBattery() {
 		return battery;
 	}
@@ -26,28 +26,28 @@ public class PayloadDto {
 	public void setLight(Long light) {
 		this.light = light;
 	}
-	public Long getTemperature() {
+	public Float getTemperature() {
 		return temperature;
 	}
-	public void setTemperature(Long temperature) {
+	public void setTemperature(Float temperature) {
 		this.temperature = temperature;
 	}
-	public Long getHumidity() {
+	public Float getHumidity() {
 		return humidity;
 	}
-	public void setHumidity(Long humidity) {
+	public void setHumidity(Float humidity) {
 		this.humidity = humidity;
 	}
-	public Long getEco2() {
+	public Float getEco2() {
 		return eco2;
 	}
-	public void setEco2(Long eco2) {
+	public void setEco2(Float eco2) {
 		this.eco2 = eco2;
 	}
-	public Long getTvoc() {
+	public Float getTvoc() {
 		return tvoc;
 	}
-	public void setTvoc(Long tvoc) {
+	public void setTvoc(Float tvoc) {
 		this.tvoc = tvoc;
 	}
 }

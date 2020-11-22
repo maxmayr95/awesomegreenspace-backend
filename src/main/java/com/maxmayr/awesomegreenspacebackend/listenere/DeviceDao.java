@@ -30,7 +30,7 @@ public class DeviceDao {
 	}
 
 	public Page<PayloadEntity> getPayload(Long deviceId,PageRequest pageable) {
-		return payloadRepository.findAllByDeviceId(deviceId,pageable);
+		return payloadRepository.findAllByDeviceIdOrderByIdDesc(deviceId,pageable);
 	}
 
 }

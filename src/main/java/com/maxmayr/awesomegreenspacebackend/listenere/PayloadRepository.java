@@ -8,6 +8,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface PayloadRepository extends PagingAndSortingRepository<PayloadEntity, Long>{
 
-	Page<PayloadEntity> findAllByDeviceId(Long deviceId,Pageable page);
+	Page<PayloadEntity> findAllByDeviceIdOrderByIdDesc(Long deviceId,Pageable page);
 
 }

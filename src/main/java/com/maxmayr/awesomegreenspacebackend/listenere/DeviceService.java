@@ -1,5 +1,8 @@
 package com.maxmayr.awesomegreenspacebackend.listenere;
 
+import java.util.Date;
+
+import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -25,8 +28,9 @@ public class DeviceService {
 			DeviceEntity entity = deviceConverter.toEntity(devicePayload);
 			returnEntity = deviceDao.createEntity(entity);
 		}
-		
-		insertPayload(returnEntity.getId(),devicePayload.getPayloadFiels());
+		PayloadDto payload = devicePayload.getPayloadFiels();
+		payload.setTime(new Date());
+		insertPayload(returnEntity.getId(),payload);
 		
 		return deviceConverter.toModel(returnEntity);
 	}
